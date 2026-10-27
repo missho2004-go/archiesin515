@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="zh-HK" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archie Sin 冼靖峰粉絲基地</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Orbitron & Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            bg: '#080811',
+                            card: 'rgba(18, 18, 36, 0.75)',
+                            cyan: '#00f3ff',
+                            magenta: '#ff007f',
+                            purple: '#a855f7',
+                            blue: '#0066ff',
+                            neonYellow: '#ffe600'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        cyber: ['Orbitron', 'sans-serif']
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 2s infinite alternate',
+                        'float': 'float 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%': { boxShadow: '0 0 15px rgba(0,243,255,0.4), 0 0 30px rgba(0,243,255,0.2)' },
+                            '100%': { boxShadow: '0 0 25px rgba(255,0,127,0.8), 0 0 50px rgba(255,0,127,0.4)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-8px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #080811;
+            color: #e2e8f0;
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(0, 243, 255, 0.12) 0%, transparent 45%),
+                radial-gradient(circle at 85% 80%, rgba(255, 0, 127, 0.12) 0%, transparent 45%),
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+            overflow-x: hidden;
+        }
+
+        /* Cyber Glassmorphism Card Style */
+        .cyber-glass {
+            background: rgba(16, 16, 32, 0.75);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(0, 243, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .cyber-glass-magenta {
+            background: rgba(26, 10, 30, 0.8);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 0, 127, 0.35);
+        }
+
+        /* Neon Text Effects */
+        .text-glow-cyan {
+            text-shadow: 0 0 8px rgba(0, 243, 255, 0.7), 0 0 20px rgba(0, 243, 255, 0.4);
+        }
+        
+        .text-glow-magenta {
+            text-shadow: 0 0 8px rgba(255, 0, 127, 0.7), 0 0 20px rgba(255, 0, 127, 0.4);
+        }
+
+        .text-glow-yellow {
+            text-shadow: 0 0 8px rgba(255, 230, 0, 0.7), 0 0 20px rgba(255, 230, 0, 0.4);
+        }
+
+        /* Glowing Border Animation on Hover */
+        .cyber-border-glow {
+            transition: all 0.3s ease;
+        }
+        .cyber-border-glow:hover {
+            border-color: #00f3ff;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+            transform: translateY(-4px);
+        }
+
+        /* Audio Visualizer Mock animation */
+        .bar {
+            width: 4px;
+            background: linear-gradient(to top, #00f3ff, #ff007f);
+            animation: bounce 1.2s infinite ease-in-out alternate;
+        }
+        .bar:nth-child(1) { height: 15px; animation-delay: 0.1s; }
+        .bar:nth-child(2) { height: 28px; animation-delay: 0.3s; }
+        .bar:nth-child(3) { height: 18px; animation-delay: 0.2s; }
+        .bar:nth-child(4) { height: 35px; animation-delay: 0.4s; }
+        .bar:nth-child(5) { height: 22px; animation-delay: 0.15s; }
+
+        @keyframes bounce {
+            0% { transform: scaleY(0.3); }
+            100% { transform: scaleY(1.1); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080811;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f1f3d;
+            border-radius: 4px;
+            border: 1px solid #00f3ff;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00f3ff;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-cyber-magenta selection:text-white">
+
+    <!-- Top Glow Grid Line -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-cyber-cyan via-cyber-magenta to-cyber-purple z-50"></div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="max-w-6xl mx-auto px-4 py-6 w-full flex-grow">
+
+        <!-- HEADER SECTION -->
+        <header class="text-center mb-8">
+            <!-- Top Badge -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-purple/20 border border-cyber-cyan/40 text-cyber-cyan text-xs font-mono mb-3 tracking-widest uppercase">
+                <span class="w-2 h-2 rounded-full bg-cyber-cyan animate-ping"></span>
+                Fans Base Platform
+            </div>
+
+            <!-- Main Title (H1) -->
+            <h1 class="text-4xl md:text-6xl font-black font-cyber tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyber-cyan via-white to-cyber-magenta text-glow-cyan mb-2">
+                Archie Sin 冼靖峰粉絲基地
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-base md:text-xl font-bold text-cyber-cyan text-glow-cyan tracking-wide mt-3 mb-4">
+                「重溫Archie的歌曲， 一起期待12月的現場演出」
+            </p>
+
+            <!-- LIVE COUNTDOWN TIMER (2026.12.06 8:15 PM) -->
+            <div class="max-w-xl mx-auto my-6 p-4 md:p-6 rounded-2xl cyber-glass border-2 border-cyber-magenta/60 shadow-[0_0_30px_rgba(255,0,127,0.3)]">
+                <div class="text-xs md:text-sm font-mono text-cyber-neonYellow mb-3 uppercase tracking-widest flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-hourglass-start animate-spin text-cyber-magenta"></i>
+                    演唱會倒數 COUNTDOWN TO LIVE (2026.12.06 8:15 PM)
+                </div>
+
+                <div class="grid grid-cols-4 gap-2 md:gap-4 text-center font-cyber">
+                    <!-- Days -->
+                    <div class="bg-black/80 rounded-xl p-2 md:p-3 border border-cyber-cyan/50 shadow-inner">
+                        <span id="cd-days" class="text-2xl md:text-4xl font-black text-cyber-cyan text-glow-cyan block">--</span>
+                        <span class="text-[10px] md:text-xs text-gray-400 font-sans mt-1 block">天 DAYS</span>
+                    </div>
+                    <!-- Hours -->
+                    <div class="bg-black/80 rounded-xl p-2 md:p-3 border border-cyber-magenta/50 shadow-inner">
+                        <span id="cd-hours" class="text-2xl md:text-4xl font-black text-cyber-magenta text-glow-magenta block">--</span>
+                        <span class="text-[10px] md:text-xs text-gray-400 font-sans mt-1 block">小時 HRS</span>
+                    </div>
+                    <!-- Minutes -->
+                    <div class="bg-black/80 rounded-xl p-2 md:p-3 border border-cyber-purple/50 shadow-inner">
+                        <span id="cd-mins" class="text-2xl md:text-4xl font-black text-purple-300 block">--</span>
+                        <span class="text-[10px] md:text-xs text-gray-400 font-sans mt-1 block">分鐘 MINS</span>
+                    </div>
+                    <!-- Seconds -->
+                    <div class="bg-black/80 rounded-xl p-2 md:p-3 border border-cyber-neonYellow/50 shadow-inner">
+                        <span id="cd-secs" class="text-2xl md:text-4xl font-black text-cyber-neonYellow text-glow-yellow block">--</span>
+                        <span class="text-[10px] md:text-xs text-gray-400 font-sans mt-1 block">秒 SECS</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- FIRST PAGE QUICK ACCESS ICON NAVIGATION BAR -->
+        <nav class="sticky top-4 z-40 mb-10">
+            <div class="cyber-glass rounded-2xl p-3 md:p-4 max-w-3xl mx-auto flex justify-around items-center gap-2 md:gap-4 shadow-2xl border-cyber-cyan/40">
+                
+                <!-- Icon 1: Profile Modal Button -->
+                <button onclick="toggleProfileModal(true)" class="flex flex-col md:flex-row items-center gap-2 px-3 py-2 md:px-5 md:py-2.5 rounded-xl bg-gradient-to-r from-cyber-purple/40 to-black/60 border border-cyber-cyan/50 text-cyber-cyan hover:border-cyber-cyan hover:bg-cyber-cyan/20 transition-all duration-300 group">
+                    <i class="fa-solid fa-user-astronaut text-xl md:text-2xl text-cyber-cyan group-hover:scale-125 transition-transform"></i>
+                    <span class="text-xs md:text-sm font-bold tracking-wider">個人資料</span>
+                </button>
+
+                <!-- Icon 2: Music Playlist Scroll Button -->
+                <a href="#playlist-section" class="flex flex-col md:flex-row items-center gap-2 px-3 py-2 md:px-5 md:py-2.5 rounded-xl bg-gradient-to-r from-cyber-purple/40 to-black/60 border border-cyber-magenta/50 text-cyber-magenta hover:border-cyber-magenta hover:bg-cyber-magenta/20 transition-all duration-300 group">
+                    <i class="fa-solid fa-compact-disc text-xl md:text-2xl text-cyber-magenta group-hover:rotate-180 transition-transform duration-700"></i>
+                    <span class="text-xs md:text-sm font-bold tracking-wider">個人歌單</span>
+                </a>
+
+                <!-- Icon 3: Ticket Info Scroll Button -->
+                <a href="#concert-section" class="flex flex-col md:flex-row items-center gap-2 px-3 py-2 md:px-5 md:py-2.5 rounded-xl bg-gradient-to-r from-cyber-purple/40 to-black/60 border border-cyber-neonYellow/50 text-cyber-neonYellow hover:border-cyber-neonYellow hover:bg-cyber-neonYellow/20 transition-all duration-300 group">
+                    <i class="fa-solid fa-ticket text-xl md:text-2xl text-cyber-neonYellow group-hover:bounce transition-transform"></i>
+                    <span class="text-xs md:text-sm font-bold tracking-wider">演唱會門票</span>
+                </a>
+
+                <!-- Icon 4: Instagram External Link -->
+                <a href="https://www.instagram.com/archie_sin" target="_blank" rel="noopener noreferrer" class="flex flex-col md:flex-row items-center gap-2 px-3 py-2 md:px-5 md:py-2.5 rounded-xl bg-gradient-to-r from-cyber-purple/40 to-black/60 border border-pink-500/50 text-pink-400 hover:border-pink-500 hover:bg-pink-500/20 transition-all duration-300 group">
+                    <i class="fa-brands fa-instagram text-xl md:text-2xl text-pink-400 group-hover:scale-125 transition-transform"></i>
+                    <span class="text-xs md:text-sm font-bold tracking-wider">Instagram</span>
+                </a>
+
+            </div>
+        </nav>
+
+        <!-- SECTION 1: CONCERT ANNOUNCEMENT (FRONT & CENTER) -->
+        <section id="concert-section" class="mb-14 scroll-mt-24">
+            <div class="cyber-glass-magenta rounded-3xl p-6 md:p-10 relative overflow-hidden border-2 border-cyber-magenta/60 shadow-[0_0_50px_rgba(255,0,127,0.25)]">
+                
+                <!-- Background Glowing Orbs -->
+                <div class="absolute -top-12 -right-12 w-48 h-48 bg-cyber-magenta/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-cyber-cyan/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute top-4 right-6 font-cyber text-xs text-cyber-magenta/40 tracking-widest">LIVE EVENT // 2026</div>
+
+                <div class="text-center max-w-3xl mx-auto">
+                    <!-- Concert Badge -->
+                    <div class="inline-block px-4 py-1.5 rounded-md bg-cyber-magenta/20 border border-cyber-magenta text-cyber-magenta font-mono text-xs md:text-sm font-bold tracking-widest uppercase mb-4">
+                        🚨 重磅演唱會預告 🚨
+                    </div>
+
+                    <!-- Main Concert Title -->
+                    <h2 class="text-2xl md:text-4xl lg:text-5xl font-black font-sans text-white text-glow-magenta mb-6 leading-tight">
+                        《海馬牌床褥呈獻：冼靖峰 ARCHIETECT LIVE IN HONG KONG》
+                    </h2>
+
+                    <!-- Concert Details Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 text-left">
+                        <div class="p-4 rounded-xl bg-black/60 border border-cyber-cyan/40 hover:border-cyber-cyan transition-colors">
+                            <div class="text-cyber-cyan font-mono text-xs mb-1"><i class="fa-regular fa-calendar-check mr-2"></i>演出日期</div>
+                            <div class="text-lg font-bold text-white">📍2026年12月6日 星期日</div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-black/60 border border-cyber-cyan/40 hover:border-cyber-cyan transition-colors">
+                            <div class="text-cyber-cyan font-mono text-xs mb-1"><i class="fa-regular fa-clock mr-2"></i>演出時間</div>
+                            <div class="text-lg font-bold text-white">📍8:15 PM</div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-black/60 border border-cyber-cyan/40 hover:border-cyber-cyan transition-colors">
+                            <div class="text-cyber-cyan font-mono text-xs mb-1"><i class="fa-solid fa-location-dot mr-2"></i>演出地點</div>
+                            <div class="text-lg font-bold text-white">📍麥花臣場館</div>
+                        </div>
+                    </div>
+
+                    <!-- Ticket Prices & VIP Perks Box -->
+                    <div class="p-6 rounded-2xl bg-gradient-to-b from-black/80 to-cyber-purple/20 border border-cyber-neonYellow/60 mb-8 text-left relative">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-800 pb-4 mb-4">
+                            <div>
+                                <span class="text-cyber-neonYellow font-bold text-sm tracking-widest uppercase block mb-1">
+                                    <i class="fa-solid fa-tags mr-2"></i>門票價錢
+                                </span>
+                                <span class="text-2xl font-black font-cyber text-white tracking-wider">
+                                    VIP$1280 <span class="text-gray-400 font-normal text-lg">/</span> $880 <span class="text-gray-400 font-normal text-lg">/</span> $580
+                                </span>
+                            </div>
+                            <div class="bg-cyber-neonYellow/10 border border-cyber-neonYellow/40 rounded-lg px-3 py-1.5 self-start md:self-auto">
+                                <span class="text-xs text-cyber-neonYellow font-mono font-bold"><i class="fa-solid fa-bolt mr-1"></i>公售日期：10月30日</span>
+                            </div>
+                        </div>
+
+                        <!-- VIP Perks -->
+                        <div class="bg-black/50 rounded-xl p-4 border border-cyber-magenta/40">
+                            <h4 class="text-cyber-magenta font-bold text-sm mb-2 flex items-center">
+                                <i class="fa-solid fa-crown mr-2 text-cyber-neonYellow"></i> VIP門票福利👇
+                            </h4>
+                            <p class="text-sm text-gray-200 font-medium">
+                                ✨ 可觀看綵排 及 1 對 1 合照
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Public Sale Call Out & Direct Action Buttons -->
+                    <div class="space-y-4">
+                        <p class="text-cyber-neonYellow text-base md:text-lg font-bold font-sans tracking-wide">
+                            🔥 門票將於10月30日在Cityline公開發售 請大家支持！🔥
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-2">
+                            <!-- Cityline Ticket Link -->
+                            <a href="https://www.cityline.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-cyber-cyan via-blue-600 to-cyber-purple text-black font-black text-lg tracking-wider hover:brightness-125 transition-all shadow-[0_0_25px_rgba(0,243,255,0.6)] flex items-center justify-center gap-3 group">
+                                <i class="fa-solid fa-ticket group-hover:rotate-12 transition-transform"></i>
+                                前往 Cityline 購票
+                            </a>
+
+                            <!-- Archie Instagram Link -->
+                            <a href="https://www.instagram.com/archie_sin" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-cyber-magenta to-purple-800 text-white font-bold text-lg tracking-wider border border-cyber-magenta hover:bg-cyber-magenta transition-all shadow-[0_0_25px_rgba(255,0,127,0.5)] flex items-center justify-center gap-3">
+                                <i class="fa-brands fa-instagram text-2xl"></i>
+                                追蹤 Archie IG (@archie_sin)
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: PERSONAL MUSIC PLAYLIST (12 UNIFORM GRID CARDS) -->
+        <section id="playlist-section" class="mb-14 scroll-mt-24">
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 gap-4 border-b border-cyber-cyan/30 pb-4">
+                <div>
+                    <div class="text-cyber-cyan font-mono text-xs tracking-widest uppercase mb-1">DISCOGRAPHY & SINGLES</div>
+                    <h2 class="text-3xl font-black text-white font-cyber flex items-center gap-3">
+                        <i class="fa-solid fa-music text-cyber-cyan"></i>
+                        個人歌單 (Music Playlist)
+                    </h2>
+                </div>
+
+                <!-- Animated Graphic Visualizer -->
+                <div class="flex items-end gap-1.5 h-8 bg-black/40 px-3 py-1.5 rounded-lg border border-cyber-cyan/20">
+                    <span class="text-xs text-cyber-cyan font-mono mr-2">PLAYLIST HQ</span>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <!-- Search Filter Bar -->
+            <div class="mb-6">
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-cyber-cyan"></i>
+                    <input type="text" id="songSearch" onkeyup="filterSongs()" placeholder="搜尋歌曲名稱..." class="w-full pl-12 pr-4 py-3 bg-black/60 border border-cyber-cyan/40 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyber-cyan transition-all">
+                </div>
+            </div>
+
+            <!-- 12 Song Cards Grid Layout (All Identical Card Dimensions) -->
+            <div id="songsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                
+                <!-- Song 1 -->
+                <div class="song-card cyber-glass p-5 rounded-2xl cyber-border-glow flex flex-col justify-between" data-title="一個人的幸運">
+                    <div>
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="p-3 rounded-xl bg-cyber-purple/30 border border-cyber-cyan/30 text-cyber-cyan">
+                                <i class="fa-solid fa-compact-disc text-2xl"></i>
+                            </div>
+                            <span class="text-xs font-mono text-cyber-cyan bg-cyber-cyan/10 px-2.5 py-1 rounded border border-cyber-cyan/30">SINGLE</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2 line-clamp-1">一個人的幸運</h3>
+                        <p class="text-xs text-gray-400 mb-4">冼靖峰 Archie Sin • 出道單曲</p>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=冼靖峰+一個人的幸運" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-500/60 hover:bg-red-600 text-red-200 hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                        在 YouTube 播放
+                    </a>
+                </div>
+
+                <!-- Song 2 (Bug Fix) -->
+                <div class="song-card cyber-glass p-5 rounded-2xl cyber-border-glow flex flex-col justify-between" data-title="Bug Fix Funky曲風">
+                    <div>
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="p-3 rounded-xl bg-cyber-purple/30 border border-cyber-cyan/30 text-cyber-cyan">
+                                <i class="fa-solid fa-code text-2xl"></i>
+                            </div>
+                            <span class="text-xs font-mono text-cyber-cyan bg-cyber-cyan/10 px-2.5 py-1 rounded border border-cyber-cyan/30">SINGLE</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2 line-clamp-1">Bug Fix</h3>
+                        <p class="text-xs text-gray-400 mb-4">冼靖峰 Archie Sin • Funky曲風</p>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=冼靖峰+Bug+Fix" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-500/60 hover:bg-red-600 text-red-200 hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                        在 YouTube 播放
+                    </a>
+                </div>
+
+                <!-- Song 3 -->
+                <div class="song-card cyber-glass p-5 rounded-2xl cyber-border-glow flex flex-col justify-between" data-title="無意冒犯">
+                    <div>
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="p-3 rounded-xl bg-cyber-purple/30 border border-cyber-cyan/30 text-cyber-cyan">
+                                <i class="fa-solid fa-microphone-lines text-2xl"></i>
+                            </div>
+                            <span class="text-xs font-mono text-cyber-cyan bg-cyber-cyan/10 px-2.5 py-1 rounded border border-cyber-cyan/30">SINGLE</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2 line-clamp-1">無意冒犯</h3>
+                        <p class="text-xs text-gray-400 mb-4">冼靖峰 Archie Sin • 深情抒情主打</p>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=冼靖峰+無意冒犯" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-500/60 hover:bg-red-600 text-red-200 hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                        在 YouTube 播放
+                    </a>
+                </div>
+
+                <!-- Song 4 (勇氣) -->
+                <div class="song-card cyber-glass p-5 rounded-2xl cyber-border-glow flex flex-col justify-between" data-title="勇氣 方皓玟作曲及填詞">
+                    <div>
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="p-3 rounded-xl bg-cyber-purple/30 border border-cyber-cyan/30 text-cyber-cyan">
+                                <i class="fa-solid fa-heart-pulse text-2xl"></i>
+                            </div>
+                            <span class="text-xs font-mono text-cyber-cyan bg-cyber-cyan/10 px-2.5 py-1 rounded border border-cyber-cyan/30">OST / SINGLE</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2 line-clamp-1">勇氣</h3>
+                        <p class="text-xs text-gray-400 mb-4">冼靖峰 Archie Sin • 獲方皓玟作曲及填詞</p>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=冼靖峰+勇氣" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-500/60 hover:bg-red-600 text-red-200 hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                        在 YouTube 播放
+                    </a>
+                </div>
+
+                <!-- Song 5 (由天台記載) -->
+                <div class="song-card cyber-glass p-5 rounded-2xl cyber-border-glow flex flex-col justify-between" data-title="由天台記載 關於遺憾">
+                    <div>
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="p-3 rounded-xl bg-cyber-purple/30 border border-cyber-cyan/30 text-cyber-cyan">
+                                <i class="fa-solid fa-building text-2xl"></i>
+                            </div>
+                            <span class="text-xs font-mono text-cyber-cyan bg-cyber-cyan/10 px-2.5 py-1 rounded border border-cyber-cyan/30">SINGLE</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2 line-clamp-1">由天台記載</h3>
+                        <p class="text-xs text-gray-400 mb-4">冼靖峰 Archie Sin • 關於遺憾</p>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=冼靖峰+由天台記載" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-500/60 hover:bg-red-600 text-red-200 hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                        在 YouTube 播放
+                    </a>
+                </div>
+
+                <!-- Song 6 -->
+                <div class="song-card cyber-glass p-5 rounded-2xl cyber-border-glow flex flex-col justify-between" data-title="本尊不是我">
+                    <div>
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="p-3 rounded-xl bg-cyber-purple/30 border border-cyber-cyan/30 text-cyber-cyan">
+                                <i class="fa-solid fa-user-ninja text-2xl"></i>
+                            </div>
+                            <span class="text-xs font-mono text-cyber-cyan bg-cyber-cyan/10 px-2.5 py-1 rounded border border-cyber-cyan/30">OST / SINGLE</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2 line-clamp-1">本尊不是我</h3>
+                        <p class="text-xs text-gray-400 mb-4">冼靖峰 Archie Sin • 劇集主題曲</p>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=冼靖峰+本尊不是我" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-500/60 hover:bg-red-600 text-red-200 hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                        在 YouTube 播放
+                    </a>
+                </div>
+
+                <!-- Song 7 -->
+                <div class="song-card cyber-glass p-5 rounded-2xl cyber-border-glow flex flex-col justify-between" data-title="是日運氣 涂毓麟 合唱">
+                    <div>
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="p-3 rounded-xl bg-cyber-purple/30 border border-cyber-cyan/30 text-cyber-cyan">
+                                <i class="fa-solid fa-users text-2xl"></i>
+                            </div>
+                            <span class="text-xs font-mono text-cyber-cyan bg-cyber-cyan/10 px-2.5 py-1 rounded border border-cyber-cyan/30 font-bold">DUET</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2 line-clamp-1">是日運氣</h3>
+                        <div class="inline-block px-2.5 py-1 rounded bg-cyber-cyan/20 border border-cyber-cyan text-cyber-cyan font-mono text-xs font-bold mb-4">
+                            🤝 與涂毓麟合唱
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=冼靖峰+涂毓麟+是日運氣" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-500/60 hover:bg-red-600 text-red-200 hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                        在 YouTube 播放
+                    </a>
+                </div>
+
+                <!-- Song 8 (如果只有這一瞬間 - CAPTION: 親自作曲及填詞) -->
+                <div class="song-card cyber-glass-magenta p-5 rounded-2xl cyber-border-glow flex flex-col justify-between border-cyber-magenta/60 shadow-[0_0_15px_rgba(255,0,127,0.25)]" data-title="如果只有這一瞬間 親自作曲及填詞 唱作人 原創">
+                    <div>
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="p-3 rounded-xl bg-cyber-magenta/30 border border-cyber-magenta/40 text-cyber-magenta">
+                                <i class="fa-solid fa-music text-2xl"></i>
+                            </div>
+                            <span class="text-xs font-mono text-cyber-magenta bg-cyber-magenta/10 px-2.5 py-1 rounded border border-cyber-magenta/40">ORIGINAL</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2 line-clamp-1">如果只有這一瞬間</h3>
+                        <div class="inline-block px-2.5 py-1 rounded bg-cyber-magenta/20 border border-cyber-magenta text-cyber-magenta font-mono text-xs font-bold mb-4">
+                            ✍️ 親自作曲及填詞
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=冼靖峰+如果只有這一瞬間" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-500/60 hover:bg-red-600 text-red-200 hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                        在 YouTube 播放
+                    </a>
+                </div>
+
+                <!-- Song 9 (窩心的味道 - CAPTION: 親自作曲及填詞) -->
+                <div class="song-card cyber-glass-magenta p-5 rounded-2xl cyber-border-glow flex flex-col justify-between border-cyber-magenta/60 shadow-[0_0_15px_rgba(255,0,127,0.25)]" data-title="窩心的味道 作曲 填詞 唱作人 原創">
+                    <div>
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="p-3 rounded-xl bg-cyber-magenta/30 border border-cyber-magenta/40 text-cyber-magenta">
+                                <i class="fa-solid fa-pen-nib text-2xl"></i>
+                            </div>
+                            <span class="text-xs font-mono text-cyber-magenta bg-cyber-magenta/10 px-2.5 py-1 rounded border border-cyber-magenta/40">ORIGINAL</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2 line-clamp-1">窩心的味道</h3>
+                        <div class="inline-block px-2.5 py-1 rounded bg-cyber-magenta/20 border border-cyber-magenta text-cyber-magenta font-mono text-xs font-bold mb-4">
+                            ✍️ 親自作曲及填詞
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=冼靖峰+窩心的味道" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-500/60 hover:bg-red-600 text-red-200 hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                        在 YouTube 播放
+                    </a>
+                </div>
+
+                <!-- Song 10 (Popstar) -->
+                <div class="song-card cyber-glass p-5 rounded-2xl cyber-border-glow flex flex-col justify-between" data-title="Popstar 與Surfive成員跳唱">
+                    <div>
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="p-3 rounded-xl bg-cyber-purple/30 border border-cyber-cyan/30 text-cyber-cyan">
+                                <i class="fa-solid fa-star text-2xl"></i>
+                            </div>
+                            <span class="text-xs font-mono text-cyber-cyan bg-cyber-cyan/10 px-2.5 py-1 rounded border border-cyber-cyan/30">SINGLE</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2 line-clamp-1">Popstar</h3>
+                        <p class="text-xs text-gray-400 mb-4">冼靖峰 Archie Sin • 與Surfive成員跳唱</p>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=冼靖峰+Popstar" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-500/60 hover:bg-red-600 text-red-200 hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                        在 YouTube 播放
+                    </a>
+                </div>
+
+                <!-- Song 11 (傻人) -->
+                <div class="song-card cyber-glass-magenta p-5 rounded-2xl cyber-border-glow flex flex-col justify-between border-cyber-magenta/60" data-title="傻人 親自填詞">
+                    <div>
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="p-3 rounded-xl bg-cyber-magenta/30 border border-cyber-magenta/40 text-cyber-magenta">
+                                <i class="fa-solid fa-face-smile text-2xl"></i>
+                            </div>
+                            <span class="text-xs font-mono text-cyber-magenta bg-cyber-magenta/10 px-2.5 py-1 rounded border border-cyber-magenta/40">SINGLE</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2 line-clamp-1">傻人</h3>
+                        <div class="inline-block px-2.5 py-1 rounded bg-cyber-magenta/20 border border-cyber-magenta text-cyber-magenta font-mono text-xs font-bold mb-4">
+                            ✍️ 親自填詞
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=冼靖峰+傻人" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-500/60 hover:bg-red-600 text-red-200 hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                        在 YouTube 播放
+                    </a>
+                </div>
+
+                <!-- Song 12: Collaboration -->
+                <div class="song-card cyber-glass p-5 rounded-2xl cyber-border-glow flex flex-col justify-between border-cyber-magenta/40" data-title="與葉振棠唱忘盡心中情 忘盡心中情">
+                    <div>
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="p-3 rounded-xl bg-cyber-magenta/30 border border-cyber-magenta/40 text-cyber-magenta">
+                                <i class="fa-solid fa-users text-2xl"></i>
+                            </div>
+                            <span class="text-xs font-mono text-cyber-magenta bg-cyber-magenta/10 px-2.5 py-1 rounded border border-cyber-magenta/30">DUET / CLASSIC</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-2 line-clamp-1">《忘盡心中情》</h3>
+                        <p class="text-xs text-gray-400 mb-4">與葉振棠唱 • 經典重唱合作曲</p>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=冼靖峰+葉振棠+忘盡心中情" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-500/60 hover:bg-red-600 text-red-200 hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                        在 YouTube 播放
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- PROFILE MODAL (PURE TEXT, NO EMBEDDED PHOTOS, NO PHOTO FRAMES) -->
+    <div id="profileModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden transition-opacity duration-300">
+        <div class="cyber-glass rounded-3xl p-6 md:p-8 max-w-xl w-full border-2 border-cyber-cyan shadow-[0_0_50px_rgba(0,243,255,0.3)] relative max-h-[90vh] overflow-y-auto">
+            
+            <!-- Close Modal Button -->
+            <button onclick="toggleProfileModal(false)" class="absolute top-5 right-5 text-gray-400 hover:text-cyber-cyan text-2xl transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="flex items-center gap-3 mb-6 border-b border-cyber-cyan/30 pb-4">
+                <div class="p-3 rounded-2xl bg-cyber-cyan/20 border border-cyber-cyan text-cyber-cyan">
+                    <i class="fa-solid fa-id-card text-3xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-black text-white font-cyber">個人資料</h3>
+                    <p class="text-xs text-cyber-cyan font-mono">ARTIST PROFILE</p>
+                </div>
+            </div>
+
+            <!-- Profile Info List (Plain Text Details, No Photos) -->
+            <div class="space-y-3.5 text-sm">
+                
+                <div class="p-4 rounded-xl bg-black/60 border border-cyber-cyan/30 flex justify-between items-center">
+                    <span class="text-gray-400 text-xs font-mono">姓名</span>
+                    <span class="text-white font-bold text-base">冼靖峰 (Archie Sin)</span>
+                </div>
+
+                <div class="p-4 rounded-xl bg-black/60 border border-cyber-cyan/30 flex justify-between items-center">
+                    <span class="text-gray-400 text-xs font-mono">出生日期</span>
+                    <span class="text-white font-bold text-base">1998年5月15日</span>
+                </div>
+
+                <div class="p-4 rounded-xl bg-black/60 border border-cyber-cyan/30 flex justify-between items-center">
+                    <span class="text-gray-400 text-xs font-mono">身份</span>
+                    <span class="text-cyber-cyan font-bold text-base">香港男歌手、主持、演員</span>
+                </div>
+
+                <div class="p-4 rounded-xl bg-black/60 border border-cyber-cyan/30 flex justify-between items-center">
+                    <span class="text-gray-400 text-xs font-mono">入行經歷</span>
+                    <span class="text-white font-bold text-base">參選 TVB《聲夢傳奇》獲得第四名並正式出道</span>
+                </div>
+
+                <div class="p-4 rounded-xl bg-gradient-to-r from-cyber-magenta/20 to-black/80 border border-cyber-magenta/50 flex justify-between items-center">
+                    <span class="text-cyber-magenta text-xs font-mono font-bold">粉絲應援名稱</span>
+                    <span class="text-cyber-neonYellow font-black text-lg tracking-wider">弓箭手 🏹</span>
+                </div>
+
+            </div>
+
+            <div class="mt-6 text-center">
+                <button onclick="toggleProfileModal(false)" class="px-6 py-2.5 rounded-xl bg-cyber-cyan/20 border border-cyber-cyan text-cyber-cyan hover:bg-cyber-cyan hover:text-black font-bold text-sm transition-all">
+                    關閉視窗
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION WITH MANDATORY PROMINENT QUOTE -->
+    <footer class="mt-12 border-t border-cyber-cyan/20 bg-black/90 py-8 px-4 relative">
+        <div class="max-w-4xl mx-auto text-center space-y-4">
+            
+            <!-- MANDATORY QUOTE AT FOOTER -->
+            <div class="p-4 rounded-2xl bg-gradient-to-r from-cyber-cyan/10 via-cyber-magenta/10 to-cyber-purple/10 border border-cyber-cyan/40">
+                <p class="text-xl md:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyber-cyan via-white to-cyber-magenta text-glow-cyan tracking-wide">
+                    「你能看見他的努力，他值得被大家認識和支持！」
+                </p>
+            </div>
+
+            <!-- Footer Disclaimer -->
+            <div class="text-xs text-gray-500 font-mono pt-2">
+                <p class="mb-1">Archie Sin 冼靖峰 粉絲基地</p>
+                <p>版權屬於粉絲個人自願製作，不涉及 fansclub 及商業用途。</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Target concert date: December 6, 2026, 20:15 HKT
+        const concertTargetDate = new Date('2026-12-06T20:15:00+08:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = concertTargetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('cd-days').innerText = String(days).padStart(2, '0');
+                document.getElementById('cd-hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('cd-mins').innerText = String(minutes).padStart(2, '0');
+                document.getElementById('cd-secs').innerText = String(seconds).padStart(2, '0');
+            } else {
+                document.getElementById('cd-days').innerText = "00";
+                document.getElementById('cd-hours').innerText = "00";
+                document.getElementById('cd-mins').innerText = "00";
+                document.getElementById('cd-secs').innerText = "00";
+            }
+        }
+
+        // Run countdown calculation immediately and update every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Profile Modal Controls
+        function toggleProfileModal(show) {
+            const modal = document.getElementById('profileModal');
+            if (show) {
+                modal.classList.remove('hidden');
+            } else {
+                modal.classList.add('hidden');
+            }
+        }
+
+        // Close modal when clicking on overlay background
+        document.getElementById('profileModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                toggleProfileModal(false);
+            }
+        });
+
+        // Dynamic Song Filter Function
+        function filterSongs() {
+            const input = document.getElementById('songSearch');
+            const filter = input.value.toLowerCase();
+            const cards = document.getElementsByClassName('song-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].getAttribute('data-title');
+                if (title.toLowerCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
